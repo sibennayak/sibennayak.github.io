@@ -14,3 +14,10 @@
 .latest .divider {
     margin-bottom: 30px;
 }
+.item-description {
+    margin-top: 1em;
+    font-size: 14px;
+}
+.fa-star {
+    margin-right: 5px;
+}
