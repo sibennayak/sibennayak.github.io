@@ -88,42 +88,15 @@
                 <!--//section-->
 
                 <section class="latest section">
-                    <h1 ng-repeat="x in records">{{x}}</h1>
                     <div class="section-inner">
                         <h2 class="heading">Professional History</h2>
-                        <div class="content">
 
-                            <div class="item featured text-center">
-                                <h3 class="title"><a href="http://www.intelsecurity.com/" target="_blank">Intel Security</a></h3>
-                                <p class="summary">Senior Software Development Engineer</br>
-                                    Bengaluru, Karnataka [October 2015 – Present]
-                                </p>
-
-                                <div class="desc text-left">
-                                    <p></p>
-                                </div>
-                                <!--//desc-->
-                            </div>
-                            <!--//item-->
-
-                            <div class="item row" ng-repeat="project in intelprojects">
-                                <div class="col-md-2 col-sm-4 col-xs-12">
-                                    <img class="img-responsive project-image" ng-src="assets/images/{{project.type}}.png" alt="{{project.name}}" />
-                                </div>
-                                <div class="desc col-md-8 col-sm-8 col-xs-12">
-                                    <h3 class="title">{{project.name}}</h3>
-                                    <span class="label label-theme" ng-repeat="role in project.roles">{{role}}</span>
-                                    <p></p>
-                                </div>
-                                <!--//desc-->
-                            </div>
-                            <!--//item-->
-
+                        <div class="content" ng-repeat="org in history">
                             <hr class="divider" />
                             <div class="item featured text-center">
-                                <h3 class="title"><a href="http://www.tcs.com/" target="_blank">Tata Consultancy Services</a></h3>
-                                <p class="summary">IT Analyst</br>
-                                    Bhubaneshwar, Odisha [August 2010 – September 2015]
+                                <h3 class="title"><a ng-href="{{org.url}}" target="_blank">{{org.name}}</a></h3>
+                                <p class="summary">{{org.designation}}</br>
+                                    {{org.location}} [{{org.duration}}]
                                 </p>
 
                                 <div class="desc text-left">
@@ -133,7 +106,7 @@
                             </div>
                             <!--//item-->
 
-                            <div class="item row" ng-repeat="project in tcsprojects">
+                            <div class="item row" ng-repeat="project in org.projects">
                                 <div class="col-md-2 col-sm-4 col-xs-12">
                                     <img class="img-responsive project-image" ng-src="assets/images/{{project.type}}.png" alt="{{project.name}}" />
                                 </div>
@@ -155,35 +128,18 @@
                 <section class="experience section">
                     <div class="section-inner">
                         <h2 class="heading">Work Experience</h2>
-                        <div class="content">
+                        <div class="content" ng-repeat="exp in experience">
                             <div class="item">
-                                <h3 class="title">Senior Software Development Engineer - <span class="place"><a href="#">Intel Security</a></span> <span class="year">(October 2015 - Present)</span></h3>
-                                <p></p>
-                            </div>
-                            <!--//item-->
-                            <div class="item">
-                                <h3 class="title">IT Analyst - <span class="place"><a href="#">Tata Consultancy Services</a></span> <span class="year">(August 2014 - September 2015)</span></h3>
-                                <p></p>
-                            </div>
-                            <!--//item-->
-                            <div class="item">
-                                <h3 class="title">Systems Engineer - <span class="place"><a href="#">Tata Consultancy Services</a></span> <span class="year">(August 2012 - July 2014)</span></h3>
-                                <p></p>
-                            </div>
-                            <!--//item-->
-                            <div class="item">
-                                <h3 class="title">Assistant Systems Engineer - <span class="place"><a href="#">Tata Consultancy Services</a></span> <span class="year">(August 2010 - July 2012)</span></h3>
+                                <h3 class="title">{{exp.designation}} - <span class="place">{{exp.company}}</span> <span class="year">({{exp.duration}})</span></h3>
                                 <p></p>
                             </div>
                             <!--//item-->
                         </div>
-                        <!--//content-->
                     </div>
-                    <!--//section-inner-->
                 </section>
-                <!--//section-->
             </div>
             <!--//primary-->
+
             <div class="secondary col-md-4 col-sm-12 col-xs-12">
                 <aside class="info aside section">
                     <div class="section-inner">
