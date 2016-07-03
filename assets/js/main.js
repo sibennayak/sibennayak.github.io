@@ -1,6 +1,4 @@
-jQuery(document).ready(function($) {
-    /*======= Skillset *=======*/
-
+$(function() {
     $('.level-bar-inner').css('width', '0');
     $(window).on('load', function() {
         $('.level-bar-inner').each(function() {
