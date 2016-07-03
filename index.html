@@ -52,12 +52,12 @@
     </header>
     <!--//header-->
 
-    <div class="container sections-wrapper">
+    <div class="container-fluid sections-wrapper">
         <div class="row">
             <div class="primary col-md-8 col-sm-12 col-xs-12">
                 <section class="about section">
                     <div class="section-inner">
-                        <h2 class="heading">Who Am I</h2>
+                        <h2 class="heading">Summary</h2>
                         <div class="content">
                             <ul>
                                 <li>An honest, diligent and hard-working professional with over 5 years of experience.</li>
@@ -76,7 +76,7 @@
 
                 <section class="about section">
                     <div class="section-inner">
-                        <h2 class="heading">What Do I Want</h2>
+                        <h2 class="heading">Objective</h2>
                         <div class="content">
                             <p>I am currently looking for a position in an organization that offers a greater challenge, increased benefits, and the opportunity to explore my advanced technical aptitude and skills to help the organization advance efficiently
                                 and productively.</p>
@@ -110,7 +110,7 @@
                                 <div class="col-md-2 col-sm-4 col-xs-12">
                                     <img class="img-responsive project-image" ng-src="assets/images/{{project.type}}.png" alt="{{project.name}}" />
                                 </div>
-                                <div class="desc col-md-8 col-sm-8 col-xs-12">
+                                <div class="desc col-md-10 col-sm-8 col-xs-12">
                                     <h3 class="title">{{project.name}}</h3>
                                     <span class="label label-theme" ng-repeat="role in project.roles">{{role}}</span>
                                     <p class="item-description">{{project.description}}</p>
@@ -183,7 +183,7 @@
                 </aside>
                 <!--//section-->
 
-                <aside class="testimonials aside section">
+                <aside class="testimonials aside section" style="display:none">
                     <div class="section-inner">
                         <h2 class="heading">Testimonials</h2>
                         <div class="content">

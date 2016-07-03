@@ -15,7 +15,7 @@ app.controller('profileCtrl', function($scope) {
             'name': 'Cloud Security Reporter',
             'roles': ['UI Developer', 'Backend Engineer'],
             'type': 'java',
-            'skills': ['J2EE', 'REST', 'ElasticSearch', 'Kafka', 'Presto', 'SQL'],
+            'skills': ['J2EE', 'REST', 'Kafka', 'ElasticSearch', 'Presto', 'SQL'],
             'description': 'A cloud based reporting solution with extensive features that help customers identify and analyze a broad range of data collected from their network devices. Loading real-time SaaS data into ElasticSearch storage engines and displaying them on interactive dashboards. '
         }, {
             'name': 'CSI Automation Framework',
@@ -46,7 +46,7 @@ app.controller('profileCtrl', function($scope) {
             'name': 'Claim Parse Automation',
             'roles': ['Backend Engineer'],
             'type': 'java',
-            'skills': ['J2EE', 'Spring', 'Apache Lucene', 'Tesseract OCR', 'SQL'],
+            'skills': ['J2EE', 'Spring', 'Apache Lucene', 'Tesseract', 'SQL'],
             'description': 'An advanced OCR tool to collect and parse patent publication documents in order to identify the claims and determine their strength. The tool made use of open source OCR, text based indexing and language processing techniques to deliver a robust solution to handle any type of document.'
         }, {
             'name': 'Collaborative Invention Mining',
@@ -96,12 +96,12 @@ app.controller('profileCtrl', function($scope) {
     $scope.skillset = [{
         'name': 'Java/J2EE',
         'level': 'Expert',
-        'percentage': '90',
+        'percentage': '95',
         'info': 'Over 6 years of experience in multiple Java projects'
     }, {
         'name': 'HTML5/CSS3/JavaScript',
         'level': 'Advanced',
-        'percentage': '80',
+        'percentage': '90',
         'info': ''
     }, {
         'name': 'Spring',

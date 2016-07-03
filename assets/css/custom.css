@@ -15,6 +15,7 @@
     background: #e68a00;
     font-size: 12px;
     margin-right: 5px;
+    display: inline-block;
 }
 .latest .divider {
     margin-bottom: 30px;
@@ -25,4 +26,11 @@
 }
 .fa-star {
     margin-right: 5px;
+}
+.container-fluid {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.level-bar-inner {
+    background: #4caf50 !important;
 }
