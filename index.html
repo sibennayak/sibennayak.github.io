@@ -2,20 +2,18 @@
 <!--[if IE 8]> <html lang="en" class="ie8"> <![endif]-->
 <!--[if IE 9]> <html lang="en" class="ie9"> <![endif]-->
 <!--[if !IE]><!-->
-<html lang="en">
+<html lang="en" ng-app="profileApp" ng-controller="profileCtrl">
 <!--<![endif]-->
 
 <head>
-    <title>Siben Nayak</title>
+    <title>{{name}}</title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Siben Nayak's GitHub profile :)">
-    <meta name="author" content="Siben Nayak">
+    <meta name="description" content="{{name}}'s GitHub profile :)">
+    <meta name="author" content="{{name}}">
     <link rel="shortcut icon" href="favicon.ico">
-    <link href='http://fonts.googleapis.com/css?family=Lato:300,400,300italic,400italic' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
     <!-- Global CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Plugins CSS -->
@@ -37,9 +35,9 @@
     <!-- ******HEADER****** -->
     <header class="header">
         <div class="container">
-            <img class="profile-image img-responsive pull-left" src="assets/images/avatar.png" alt="Siben Nayak" />
+            <img class="profile-image img-responsive pull-left" src="assets/images/avatar.png" alt="{{name}}" />
             <div class="profile-content pull-left">
-                <h1 class="name">Siben Nayak</h1>
+                <h1 class="name">{{name}}</h1>
                 <h2 class="desc">Java &amp; Web Developer</h2>
                 <ul class="social list-inline">
                     <li><a href="https://plus.google.com/102680720620903375780"><i class="fa fa-google-plus"></i></a></li>
@@ -90,6 +88,7 @@
                 <!--//section-->
 
                 <section class="latest section">
+                    <h1 ng-repeat="x in records">{{x}}</h1>
                     <div class="section-inner">
                         <h2 class="heading">Professional History</h2>
                         <div class="content">
@@ -107,24 +106,13 @@
                             </div>
                             <!--//item-->
 
-                            <div class="item row">
+                            <div class="item row" ng-repeat="project in intelprojects">
                                 <div class="col-md-2 col-sm-4 col-xs-12">
-                                    <img class="img-responsive project-image" src="assets/images/java.png" alt="CSR" />
+                                    <img class="img-responsive project-image" ng-src="assets/images/{{project.type}}.png" alt="{{project.name}}" />
                                 </div>
                                 <div class="desc col-md-8 col-sm-8 col-xs-12">
-                                    <h3 class="title">Cloud Security Reporter</h3><span class="label label-theme">UI Developer</span> <span class="label label-theme">Backend Engineer</span>
-                                    <p></p>
-                                </div>
-                                <!--//desc-->
-                            </div>
-                            <!--//item-->
-
-                            <div class="item row">
-                                <a class="col-md-2 col-sm-4 col-xs-12">
-                                    <img class="img-responsive project-image" src="assets/images/node.png" alt="CAF" />
-                                </a>
-                                <div class="desc col-md-8 col-sm-8 col-xs-12">
-                                    <h3 class="title">CSI Automation Framework</h3><span class="label label-theme">Automation Engineer</span>
+                                    <h3 class="title">{{project.name}}</h3>
+                                    <span class="label label-theme" ng-repeat="role in project.roles">{{role}}</span>
                                     <p></p>
                                 </div>
                                 <!--//desc-->
@@ -145,84 +133,13 @@
                             </div>
                             <!--//item-->
 
-                            <div class="item row">
-                                <a class="col-md-2 col-sm-4 col-xs-12">
-                                    <img class="img-responsive project-image" src="assets/images/devops.png" alt="TAF" />
-                                </a>
-                                <div class="desc col-md-8 col-sm-8 col-xs-12">
-                                    <h3 class="title">Test Automation Framework</h3><span class="label label-theme">Automation Engineer</span>
-                                    <p></p>
+                            <div class="item row" ng-repeat="project in tcsprojects">
+                                <div class="col-md-2 col-sm-4 col-xs-12">
+                                    <img class="img-responsive project-image" ng-src="assets/images/{{project.type}}.png" alt="{{project.name}}" />
                                 </div>
-                                <!--//desc-->
-                            </div>
-                            <!--//item-->
-
-                            <div class="item row">
-                                <a class="col-md-2 col-sm-4 col-xs-12">
-                                    <img class="img-responsive project-image" src="assets/images/html.png" alt="PPV" />
-                                </a>
                                 <div class="desc col-md-8 col-sm-8 col-xs-12">
-                                    <h3 class="title">Patent Portfolio Visualization</h3><span class="label label-theme">UX Designer</span>
-                                    <p></p>
-                                </div>
-                                <!--//desc-->
-                            </div>
-                            <!--//item-->
-
-                            <div class="item row">
-                                <a class="col-md-2 col-sm-4 col-xs-12">
-                                    <img class="img-responsive project-image" src="assets/images/java.png" alt="CPA" />
-                                </a>
-                                <div class="desc col-md-8 col-sm-8 col-xs-12">
-                                    <h3 class="title">Claim Parse Automation</h3><span class="label label-theme">Backend Engineer</span>
-                                    <p></p>
-                                </div>
-                                <!--//desc-->
-                            </div>
-                            <!--//item-->
-
-                            <div class="item row">
-                                <a class="col-md-2 col-sm-4 col-xs-12">
-                                    <img class="img-responsive project-image" src="assets/images/flash.png" alt="CIM" />
-                                </a>
-                                <div class="desc col-md-8 col-sm-8 col-xs-12">
-                                    <h3 class="title">Collaborative Invention Mining</h3><span class="label label-theme">UX Designer</span>
-                                    <p></p>
-                                </div>
-                                <!--//desc-->
-                            </div>
-                            <!--//item-->
-
-                            <div class="item row">
-                                <a class="col-md-2 col-sm-4 col-xs-12">
-                                    <img class="img-responsive project-image" src="assets/images/java.png" alt="IPRMS" />
-                                </a>
-                                <div class="desc col-md-8 col-sm-8 col-xs-12">
-                                    <h3 class="title">Patent, Trademark and Copyright</h3><span class="label label-theme">Backend Engineer</span>
-                                    <p></p>
-                                </div>
-                                <!--//desc-->
-                            </div>
-                            <!--//item-->
-
-                            <div class="item row">
-                                <a class="col-md-2 col-sm-4 col-xs-12">
-                                    <img class="img-responsive project-image" src="assets/images/jsf.png" alt="PPAM" />
-                                </a>
-                                <div class="desc col-md-8 col-sm-8 col-xs-12">
-                                    <h3 class="title">Partner Portal Administration and Management</h3><span class="label label-theme">UX Designer</span> <span class="label label-theme">Backend Engineer</span>
-                                    <p></p>
-                                </div>
-                                <!--//desc-->
-                            </div>
-                            <!--//item-->
-
-                            <div class="item row">
-                                <a class="col-md-2 col-sm-4 col-xs-12">
-                                    <img class="img-responsive project-image" src="assets/images/java.png" alt="CELO" />
-                                </a>
-                                <div class="desc col-md-8 col-sm-8 col-xs-12">
-                                    <h3 class="title">Currency Engine for LoyaltyOne</h3><span class="label label-theme">Backend Engineer</span>
+                                    <h3 class="title">{{project.name}}</h3>
+                                    <span class="label label-theme" ng-repeat="role in project.roles">{{role}}</span>
                                     <p></p>
                                 </div>
                                 <!--//desc-->
@@ -292,61 +209,10 @@
                             </p>
 
                             <div class="skillset">
-
-                                <div class="item">
-                                    <h3 class="level-title">Java/J2EE<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="You can use the tooltip to add more info...">Expert</span></h3>
+                                <div class="item" ng-repeat="skill in skillset">
+                                    <h3 class="level-title">{{skill.name}}<span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="{{skill.info}}">{{skill.level}}</span></h3>
                                     <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="95%">
-                                        </div>
-                                    </div>
-                                    <!--//level-bar-->
-                                </div>
-                                <!--//item-->
-
-                                <div class="item">
-                                    <h3 class="level-title">HTML5 &amp; CSS3<span class="level-label">Expert</span></h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="90%">
-                                        </div>
-                                    </div>
-                                    <!--//level-bar-->
-                                </div>
-                                <!--//item-->
-
-                                <div class="item">
-                                    <h3 class="level-title">JavaScript &amp; jQuery<span class="level-label">Expert</span></h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="90%">
-                                        </div>
-                                    </div>
-                                    <!--//level-bar-->
-                                </div>
-                                <!--//item-->
-
-                                <div class="item">
-                                    <h3 class="level-title">Spring<span class="level-label">Advanced</span></h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="80%">
-                                        </div>
-                                    </div>
-                                    <!--//level-bar-->
-                                </div>
-                                <!--//item-->
-
-                                <div class="item">
-                                    <h3 class="level-title">NodeJS<span class="level-label">Intermediate</span></h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="60%">
-                                        </div>
-                                    </div>
-                                    <!--//level-bar-->
-                                </div>
-                                <!--//item-->
-
-                                <div class="item">
-                                    <h3 class="level-title">Android/Ionic/Cordova<span class="level-label">Beginner</span></h3>
-                                    <div class="level-bar">
-                                        <div class="level-bar-inner" data-level="30%">
+                                        <div class="level-bar-inner" data-level="{{skill.percentage}}%">
                                         </div>
                                     </div>
                                     <!--//level-bar-->
@@ -368,8 +234,8 @@
                                 <blockquote class="quote">
                                     <p><i class="fa fa-quote-left"></i>Siben is an excellent software engineer and he is passionate about what he does. You can totally count on him to deliver your projects!</p>
                                 </blockquote>
-                                <p class="source"><span class="name">Tim Adams</span>
-                                    <br /><span class="title">Curabitur commodo</span></p>
+                                <p class="source"><span class="name">Mohan Babu</span>
+                                    <br /><span class="title">Intel Security</span></p>
                             </div>
                             <!--//item-->
 
@@ -461,7 +327,7 @@
     <!-- ******FOOTER****** -->
     <footer class="footer">
         <div class="container text-center">
-            <small class="copyright">Copyright (c) 2016 Siben Nayak. All Rights Reserved.</small>
+            <small class="copyright">Copyright (c) 2016 {{name}}. All Rights Reserved.</small>
         </div>
         <!--//container-->
     </footer>
@@ -470,8 +336,9 @@
     <!-- Javascript -->
     <script src="assets/js/jquery.min.js"></script>
     <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/angular.min.js"></script>
     <!-- custom js -->
-    <script type="text/javascript" src="assets/js/main.js"></script>
+    <script src="assets/js/app.js"></script>
 
 </body>
 
