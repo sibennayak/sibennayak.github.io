@@ -8,6 +8,9 @@
     height: 10em;
     border-radius: 5em;
 }
+.desc {
+    margin-bottom: 10px;
+}
 .label-theme {
     margin-right: 5px;
 }
@@ -23,6 +26,7 @@
 .item-description {
     margin-top: 1em;
     font-size: 14px;
+    text-align: justify;
 }
 .fa-star {
     margin-right: 5px;
@@ -33,4 +37,7 @@
 }
 .level-bar-inner {
     background: #4caf50 !important;
+}
+.experience .item {
+    margin-bottom: 10px;
 }

@@ -227,7 +227,7 @@
                             <ul class="list-unstyled">
                                 <li class="item" ng-repeat="language in languages">
                                     <span class="title"><strong>{{language.name}}:</strong></span>
-                                    <span class="level">{{language.type}} <br class="visible-xs"/><i class="fa fa-star" ng-repeat="i in range(5)"></i></span>
+                                    <span class="level">{{language.type}} <br class="visible-xs"/><i class="fa fa-star" ng-repeat="i in range(language.fluency)"></i></span>
                                 </li>
                                 <!--//item-->
                             </ul>
