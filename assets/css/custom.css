@@ -11,6 +11,11 @@
 .label-theme {
     margin-right: 5px;
 }
+.label-skills {
+    background: #e68a00;
+    font-size: 12px;
+    margin-right: 5px;
+}
 .latest .divider {
     margin-bottom: 30px;
 }

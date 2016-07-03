@@ -114,6 +114,7 @@
                                     <h3 class="title">{{project.name}}</h3>
                                     <span class="label label-theme" ng-repeat="role in project.roles">{{role}}</span>
                                     <p class="item-description">{{project.description}}</p>
+                                    <span class="label label-skills" ng-repeat="skill in project.skills">{{skill}}</span>
                                 </div>
                                 <!--//desc-->
                             </div>
@@ -147,8 +148,8 @@
                         <div class="content">
                             <ul class="list-unstyled">
                                 <li><i class="fa fa-map-marker"></i><span class="sr-only">Location:</span>Bengaluru, Karnataka, India</li>
-                                <li><i class="fa fa-envelope-o"></i><span class="sr-only">Email:</span><a href="#">siben.nayak@gmail.com</a></li>
-                                <li><i class="fa fa-link"></i><span class="sr-only">Website:</span><a href="#">http://www.sibennayak.github.io</a></li>
+                                <li><i class="fa fa-envelope-o"></i><span class="sr-only">Email:</span><a ng-href="mailto:{{mail}}">{{mail}}</a></li>
+                                <li><i class="fa fa-link"></i><span class="sr-only">Website:</span><a ng-href="{{site}}">{{site}}</a></li>
                             </ul>
                         </div>
                         <!--//content-->
@@ -190,12 +191,12 @@
                                 <blockquote class="quote">
                                     <p><i class="fa fa-quote-left"></i>Siben is an excellent software engineer and he is passionate about what he does. You can totally count on him to deliver your projects!</p>
                                 </blockquote>
-                                <p class="source"><span class="name">Mohan Babu</span>
-                                    <br /><span class="title">Intel Security</span></p>
+                                <p class="source"><span class="name">Anonymous</span>
+                                    <br /><span class="title"></span></p>
                             </div>
                             <!--//item-->
 
-                            <p><a class="more-link" href="https://www.linkedin.com/in/siben-nayak"><i class="fa fa-external-link"></i> More on Linkedin</a></p>
+                            <p><a class="more-link" href="https://www.linkedin.com/in/siben-nayak" target="_blank"><i class="fa fa-external-link"></i> More on Linkedin</a></p>
 
                         </div>
                         <!--//content-->
