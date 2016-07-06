@@ -6,21 +6,21 @@
 <!--<![endif]-->
 
 <head>
-    <title>{{name}}</title>
+    <title>Siben Nayak</title>
     <!-- Meta -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="{{name}}'s GitHub profile :)">
-    <meta name="author" content="{{name}}">
+    <meta name="description" content="Siben Nayak's GitHub profile :)">
+    <meta name="author" content="Siben Nayak">
     <link rel="shortcut icon" href="favicon.ico">
     <!-- Global CSS -->
     <link rel="stylesheet" href="assets/css/bootstrap.min.css">
     <!-- Plugins CSS -->
     <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-
     <!-- Theme CSS -->
     <link rel="stylesheet" href="assets/css/styles.css">
+    <!-- Custom Theme CSS -->
     <link rel="stylesheet" href="assets/css/custom.css">
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
 
@@ -38,12 +38,9 @@
             <img class="profile-image img-responsive pull-left" src="assets/images/avatar.png" alt="{{name}}" />
             <div class="profile-content pull-left">
                 <h1 class="name">{{name}}</h1>
-                <h2 class="desc">Java &amp; Web Developer</h2>
+                <h2 class="desc">{{role}}</h2>
                 <ul class="social list-inline">
-                    <li><a href="https://plus.google.com/102680720620903375780"><i class="fa fa-google-plus"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/siben-nayak"><i class="fa fa-linkedin"></i></a></li>
-                    <li><a href="https://github.com/sibennayak"><i class="fa fa-github"></i></a></li>
-                    <li class="last-item"><a href="https://www.hackerearth.com/@siben"><i class="fa fa-hacker-news"></i></a></li>
+                    <li ng-repeat="link in links"><a ng-href="{{link.url}}"><i class="fa {{link.icon}}"></i></a></li>
                 </ul>
             </div>
             <!--//profile-->
@@ -60,12 +57,7 @@
                         <h2 class="heading">Summary</h2>
                         <div class="content">
                             <ul>
-                                <li>An honest, diligent and hard-working professional with over 5 years of experience.</li>
-                                <li>Constantly praised by supervisors for my analytical skills and aptitude for learning.</li>
-                                <li>Demonstrated ability to quickly grasp new concepts and adapt to changing work environments.</li>
-                                <li>Always been zealous to learn new technologies and face new challenges.</li>
-                                <li>My performance has been consistently on the higher side of the graph. I have consistently been a top performer over the years.</li>
-                                <li>A good team player and have always kept the common objective of the team before my own.</li>
+                                <li ng-repeat="line in summary">{{line}}</li>
                             </ul>
                         </div>
                         <!--//content-->
@@ -78,8 +70,7 @@
                     <div class="section-inner">
                         <h2 class="heading">Objective</h2>
                         <div class="content">
-                            <p>I am currently looking for a position in an organization that offers a greater challenge, increased benefits, and the opportunity to explore my advanced technical aptitude and skills to help the organization advance efficiently
-                                and productively.</p>
+                            <p>{{objective}}</p>
                         </div>
                         <!--//content-->
                     </div>
@@ -142,12 +133,13 @@
             <!--//primary-->
 
             <div class="secondary col-md-4 col-sm-12 col-xs-12">
+
                 <aside class="info aside section">
                     <div class="section-inner">
                         <h2 class="heading sr-only">Basic Information</h2>
                         <div class="content">
                             <ul class="list-unstyled">
-                                <li><i class="fa fa-map-marker"></i><span class="sr-only">Location:</span>Bengaluru, Karnataka, India</li>
+                                <li><i class="fa fa-map-marker"></i><span class="sr-only">Location:</span>{{location}}</li>
                                 <li><i class="fa fa-envelope-o"></i><span class="sr-only">Email:</span><a ng-href="mailto:{{mail}}">{{mail}}</a></li>
                                 <li><i class="fa fa-link"></i><span class="sr-only">Website:</span><a ng-href="{{site}}">{{site}}</a></li>
                             </ul>
@@ -183,21 +175,17 @@
                 </aside>
                 <!--//section-->
 
-                <aside class="testimonials aside section" style="display:none">
+                <aside class="education aside section">
                     <div class="section-inner">
-                        <h2 class="heading">Testimonials</h2>
+                        <h2 class="heading">Education</h2>
                         <div class="content">
-                            <div class="item">
-                                <blockquote class="quote">
-                                    <p><i class="fa fa-quote-left"></i>Siben is an excellent software engineer and he is passionate about what he does. You can totally count on him to deliver your projects!</p>
-                                </blockquote>
-                                <p class="source"><span class="name">Anonymous</span>
-                                    <br /><span class="title"></span></p>
-                            </div>
-                            <!--//item-->
-
-                            <p><a class="more-link" href="https://www.linkedin.com/in/siben-nayak" target="_blank"><i class="fa fa-external-link"></i> More on Linkedin</a></p>
-
+                            <ul class="list-unstyled">
+                                <li class="item" ng-repeat="class in education">
+                                    <h3 class="title"><i class="fa fa-graduation-cap"></i> {{class.title}}</h3>
+                                    <h4 class="university"><a ng-href="{{class.url}}" target="_blank">{{class.university}} </a><span class="year">({{class.year}})</span></h4>
+                                </li>
+                                <!--//item-->
+                            </ul>
                         </div>
                         <!--//content-->
                     </div>
@@ -205,14 +193,37 @@
                 </aside>
                 <!--//section-->
 
-                <aside class="education aside section">
+                <aside class="list conferences aside section">
                     <div class="section-inner">
-                        <h2 class="heading">Education</h2>
+                        <h2 class="heading">Patents</h2>
                         <div class="content">
-                            <div class="item">
-                                <h3 class="title"><i class="fa fa-graduation-cap"></i> B.Tech Computer Science &amp; Engineering</h3>
-                                <h4 class="university">College of Engineering &amp; Technology <span class="year">(2006-2010)</span></h4>
+                            <ul class="list-unstyled">
+                                <li ng-repeat="patent in patents"><i class="fa fa-file-text-o"></i>
+                                    <a ng-href="{{patent.url}}" target="_blank">{{patent.title}}</a>
+                                </li>
+                            </ul>
+                        </div>
+                        <!--//content-->
+                    </div>
+                    <!--//section-inner-->
+                </aside>
+                <!--//section-->
+
+                <aside class="testimonials aside section" style="display:none">
+                    <div class="section-inner">
+                        <h2 class="heading">Testimonials</h2>
+                        <div class="content">
+                            <div class="item" ng-repeat="testimonial in testimonials">
+                                <blockquote class="quote">
+                                    <p><i class="fa fa-quote-left"></i>{{testimonial.quote}}</p>
+                                </blockquote>
+                                <p class="source"><span class="name">{{testimonial.name}}</span>
+                                    <br /><span class="title"></span>{{testimonial.organization}}</p>
                             </div>
+                            <!--//item-->
+
+                            <p><a class="more-link" href="https://www.linkedin.com/in/siben-nayak" target="_blank"><i class="fa fa-external-link"></i> More on Linkedin</a></p>
+
                         </div>
                         <!--//content-->
                     </div>
@@ -230,22 +241,6 @@
                                     <span class="level">{{language.type}} <br class="visible-xs"/><i class="fa fa-star" ng-repeat="i in range(language.fluency)"></i></span>
                                 </li>
                                 <!--//item-->
-                            </ul>
-                        </div>
-                        <!--//content-->
-                    </div>
-                    <!--//section-inner-->
-                </aside>
-                <!--//section-->
-
-                <aside class="list conferences aside section">
-                    <div class="section-inner">
-                        <h2 class="heading">Patents</h2>
-                        <div class="content">
-                            <ul class="list-unstyled">
-                                <li><i class="fa fa-file-text-o"></i>
-                                    <a href="http://www.google.com/patents/CA2829985A1" target="_blank">System and method for validation and conversion of electronic data</a>
-                                </li>
                             </ul>
                         </div>
                         <!--//content-->
