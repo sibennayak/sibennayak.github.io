@@ -1,6 +1,73 @@
 /* global angular, $ */
 var app = angular.module('profileApp', []);
 
+/**
+ * Custom directives
+ */
+app.directive('history', () => {
+    return {
+        restrict: 'E',
+        replace: false,
+        templateUrl: 'templates/history.html'
+    };
+});
+
+app.directive('experience', () => {
+    return {
+        restrict: 'E',
+        replace: false,
+        templateUrl: 'templates/experience.html'
+    };
+});
+
+app.directive('basicInfo', () => {
+    return {
+        restrict: 'E',
+        replace: false,
+        templateUrl: 'templates/basic-info.html'
+    };
+});
+
+app.directive('skills', () => {
+    return {
+        restrict: 'E',
+        replace: false,
+        templateUrl: 'templates/skills.html'
+    };
+});
+
+app.directive('education', () => {
+    return {
+        restrict: 'E',
+        replace: false,
+        templateUrl: 'templates/education.html'
+    };
+});
+
+app.directive('patents', () => {
+    return {
+        restrict: 'E',
+        replace: false,
+        templateUrl: 'templates/patents.html'
+    };
+});
+
+app.directive('testimonials', () => {
+    return {
+        restrict: 'E',
+        replace: false,
+        templateUrl: 'templates/testimonials.html'
+    };
+});
+
+app.directive('languages', () => {
+    return {
+        restrict: 'E',
+        replace: false,
+        templateUrl: 'templates/languages.html'
+    };
+});
+
 app.controller('profileCtrl', function($scope) {
     $scope.name = 'Siben Nayak';
 

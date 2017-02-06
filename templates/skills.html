@@ -1,0 +1,23 @@
+<div class="section-inner">
+    <h2 class="heading">Skills</h2>
+    <div class="content">
+        <p class="intro">
+        </p>
+
+        <div class="skillset">
+            <div class="item" ng-repeat="skill in skillset">
+                <h3 class="level-title">{{skill.name}}
+                    <span class="level-label" data-toggle="tooltip" data-placement="left" data-animation="true" title="{{skill.info}}">{{skill.level}}</span>
+                </h3>
+                <div class="level-bar">
+                    <div class="level-bar-inner" data-level="{{skill.percentage}}%">
+                    </div>
+                </div>
+                <!--//level-bar-->
+            </div>
+            <!--//item-->
+        </div>
+    </div>
+    <!--//content-->
+</div>
+<!--//section-inner-->
