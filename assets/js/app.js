@@ -1,15 +1,16 @@
+/* global angular, $ */
 var app = angular.module('profileApp', []);
 
 app.controller('profileCtrl', function($scope) {
-    $scope.name = 'Siben Nayak'
+    $scope.name = 'Siben Nayak';
 
-    $scope.role = 'Java & Web Developer'
+    $scope.role = 'Java & Web Developer';
 
-    $scope.mail = 'siben.nayak@gmail.com'
+    $scope.mail = 'siben.nayak@gmail.com';
 
-    $scope.site = 'https://sibennayak.github.io'
+    $scope.site = 'https://sibennayak.github.io';
 
-    $scope.location = 'Bengaluru, Karnataka, India'
+    $scope.location = 'Bengaluru, Karnataka, India';
 
     $scope.links = [{
         url: 'https://github.com/sibennayak',
@@ -23,19 +24,19 @@ app.controller('profileCtrl', function($scope) {
     }, {
         url: 'https://www.hackerearth.com/@siben',
         icon: 'fa-hacker-news'
-    }]
+    }];
 
-    $scope.summary = ['An honest, diligent and hard-working professional with over 5 years of experience.',
+    $scope.summary = ['An honest, diligent and hard-working professional with over 6.5 years of experience.',
         'Constantly praised by supervisors for my analytical skills and aptitude for learning.',
         'Demonstrated ability to quickly grasp new concepts and adapt to changing work environments.',
         'Always been zealous to learn new technologies and face new challenges.',
         'My performance has been consistently on the higher side of the graph. I have consistently been a top performer over the years.',
         'A good team player and have always kept the common objective of the team before my own.'
-    ]
+    ];
 
     $scope.objective = 'I am currently looking for a position in an organization that offers a greater challenge, \
         increased benefits, and the opportunity to explore my advanced technical aptitude and skills \
-        to help the organization advance efficiently and productively.'
+        to help the organization advance efficiently and productively.';
 
     $scope.history = [{
         name: 'Intel Corporation',
@@ -47,10 +48,10 @@ app.controller('profileCtrl', function($scope) {
             name: 'Cloud Security Reporter',
             roles: ['UI Developer', 'Backend Engineer'],
             type: 'java',
-            skills: ['J2EE', 'REST', 'Kafka', 'ElasticSearch', 'Presto', 'SQL'],
-            description: 'A cloud based reporting solution with extensive features that help customers identify and analyze a broad range \
-            of data collected from their network devices. It streams real-time SaaS data into ElasticSearch storage engines \
-            and displaying them on interactive dashboards. '
+            skills: ['J2EE', 'REST', 'Kafka', 'Spark', 'ElasticSearch', 'Presto', 'SQL'],
+            description: 'A cloud based reporting solution with extensive features that help customers identify and analyze a broad range of data collected from their \
+            network devices and McAfee products. Loading real-time log data hooked up with Kafka and Spark into ElasticSearch storage engines and displaying \
+            them on interactive dashboards using RESTful services.'
         }, {
             name: 'CSI Automation Framework',
             roles: ['Automation Engineer'],
@@ -58,7 +59,7 @@ app.controller('profileCtrl', function($scope) {
             skills: ['JavaScript', 'Selenium', 'Jasmine', 'Protractor', 'NodeJS'],
             description: 'A JavaScript based UI Automation Framework built around NodeJS/Jasmine/Protractor. \
             Involved in creating product specific extensions and publishing them to the central node repository to be used \
-            by the various product teams for automating their UI. '
+            by the various product teams for automating their UI.'
         }]
     }, {
         name: 'Tata Consultancy Services',
@@ -121,7 +122,7 @@ app.controller('profileCtrl', function($scope) {
             workflow mechanism. A loyalty solution developed for Loyalty One, Canada to migrate their existing system \
             of customer reward management.'
         }]
-    }]
+    }];
 
     $scope.experience = [{
         designation: 'Senior Software Development Engineer',
@@ -139,7 +140,7 @@ app.controller('profileCtrl', function($scope) {
         designation: 'Assistant Systems Engineer',
         company: 'Tata Consultancy Services',
         duration: 'August 2010 - July 2012'
-    }]
+    }];
 
     $scope.skillset = [{
         name: 'Java/J2EE',
@@ -152,21 +153,21 @@ app.controller('profileCtrl', function($scope) {
         percentage: '90',
         info: ''
     }, {
-        name: 'Spring',
+        name: 'NodeJS/AngularJS/jQuery',
         level: 'Advanced',
-        percentage: '70',
+        percentage: '75',
         info: ''
     }, {
-        name: 'NodeJS/AngularJS',
+        name: 'Spring',
         level: 'Intermediate',
         percentage: '50',
         info: ''
     }, {
         name: 'Android/Ionic/Cordova',
         level: 'Beginner',
-        percentage: '30',
+        percentage: '10',
         info: ''
-    }]
+    }];
 
     $scope.languages = [{
         name: 'English',
@@ -188,33 +189,33 @@ app.controller('profileCtrl', function($scope) {
         name: 'Kannada',
         type: 'Limited Working',
         fluency: 2
-    }]
+    }];
 
     $scope.education = [{
         title: 'B.Tech Computer Science & Engineering',
         university: 'College of Engineering & Technology',
         url: 'https://en.wikipedia.org/wiki/College_of_Engineering_and_Technology,_Bhubaneswar',
         year: '2006-2010'
-    }]
+    }];
 
     $scope.patents = [{
         title: 'System and method for validation and conversion of electronic data',
         url: 'http://www.google.com/patents/CA2829985A1'
-    }]
+    }];
 
     $scope.testimonials = [{
         quote: 'Siben is an excellent software engineer and he is passionate about what he does. You can totally count on him to deliver your projects!',
         name: 'Anonymous',
         organization: 'Organization'
-    }]
+    }];
 
     $scope.range = function(count) {
         var ratings = [];
         for (var i = 0; i < count; i++) {
-            ratings.push(i)
+            ratings.push(i);
         }
         return ratings;
-    }
+    };
 });
 
 $(function() {
