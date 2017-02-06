@@ -2,7 +2,7 @@
     <h2 class="heading">Education</h2>
     <div class="content">
         <ul class="list-unstyled">
-            <li class="item" ng-repeat="class in education">
+            <li class="item" ng-repeat="class in profile.education">
                 <h3 class="title"><i class="fa fa-graduation-cap"></i> {{class.title}}</h3>
                 <h4 class="university"><a ng-href="{{class.url}}" target="_blank">{{class.university}} </a><span class="year">({{class.year}})</span></h4>
             </li>

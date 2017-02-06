@@ -43,8 +43,8 @@
         <div class="container">
             <img class="profile-image img-responsive pull-left" src="assets/images/avatar.png" alt="{{name}}" />
             <div class="profile-content pull-left">
-                <h1 class="name">{{name}}</h1>
-                <h2 class="desc">{{role}}</h2>
+                <h1 class="name">{{profile.name}}</h1>
+                <h2 class="desc">{{profile.role}}</h2>
                 <ul class="social list-inline">
                     <li ng-repeat="link in links"><a ng-href="{{link.url}}"><i class="fa {{link.icon}}"></i></a></li>
                 </ul>
@@ -64,7 +64,7 @@
                         <h2 class="heading">Summary</h2>
                         <div class="content">
                             <ul>
-                                <li ng-repeat="line in summary">{{line}}</li>
+                                <li ng-repeat="line in profile.summary">{{line}}</li>
                             </ul>
                         </div>
                         <!--//content-->
@@ -77,7 +77,7 @@
                     <div class="section-inner">
                         <h2 class="heading">Objective</h2>
                         <div class="content">
-                            <p>{{objective}}</p>
+                            <p>{{profile.objective}}</p>
                         </div>
                         <!--//content-->
                     </div>
